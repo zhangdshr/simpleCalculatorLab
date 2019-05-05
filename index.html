@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Simple Calculator Lab</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Simple Calculator Lab</div>
+        <form method="POST" action="aRes.do"> 
+            
+            <input type="text" name="aPlus"> + <input type="text" name="bPlus"><br>
+            <input type="text" name="aMinus"> + <input type="text" name="bMinus"><br>
+            <input type="submit" name="resA">
+            
+        </form>
+        
+        <div>
+            <input id="aPluc" type="text"> + <input id="bPluc" type="text"> = <input type="text" id="resPlus"><br>
+            <input type="text" id="aMinus"> + <input type="text" id="bMinus"> = <input type="text" id="resMinus"><br>       
+            <button type="button" onclick="myCalPluc()">calculate Button</button>
+        </div>
+        
+        <script>
+            function myCalPluc() {
+                var aPlus = document.getElementById("aPluc").value;
+                var bPlus = document.getElementById("bPluc").value; 
+                
+                if (aPlus !== "" && bPlus !== "") {
+                    var resPlus = c=parseInt(aPlus)+parseInt(bPlus);
+                    document.getElementById("resPlus").value= resPlus;
+                }
+                
+                var aMinus = document.getElementById("aMinus").value;
+                var bMinus = document.getElementById("bMinus").value; 
+                
+                if (aMinus !== "" && bMinus !== "") {
+                    var resMinus = c=parseInt(aMinus)*parseInt(bMinus);
+                    document.getElementById("resMinus").value= resMinus;
+                }
+            }
+        </script>
+    </body>
+</html>
